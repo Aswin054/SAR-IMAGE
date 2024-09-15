@@ -1,0 +1,7 @@
+tensorflow==2.13.0
+opencv-python==4.8.0.76
+numpy==1.24.3
+streamlit==1.24.0
+Pillow==10.0.0
+plotly==5.15.0
+webcolors==1.12
