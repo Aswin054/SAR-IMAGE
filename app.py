@@ -10,6 +10,9 @@ import plotly.express as px
 import zipfile
 import webcolors
 
+# Ensure opencv-python-headless is used
+# Run `pip install opencv-python-headless` to ensure you have it installed
+
 # Load Pretrained Model from .h5 File
 def load_pretrained_model(model_path):
     with st.spinner('Loading pretrained model...'):
@@ -185,8 +188,8 @@ def save_and_download_image(image, filename, description):
 def save_images_to_zip(original_image_gray, enhanced_image, filenames):
     zip_filename = "processed_images.zip"
     with zipfile.ZipFile(zip_filename, 'w') as zipf:
-        zipf.write(filenames[0], original_image_gray)
-        zipf.write(filenames[1], enhanced_image)
+        zipf.write(filenames[0])
+        zipf.write(filenames[1])
     with open(zip_filename, "rb") as file:
         st.download_button(label="Download Processed Images (ZIP)", data=file, file_name=zip_filename)
 
