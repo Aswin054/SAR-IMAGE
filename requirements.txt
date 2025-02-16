@@ -5,3 +5,4 @@ streamlit>=1.25.0
 Pillow==10.0.0
 plotly==5.15.0
 webcolors==1.12
+opencv-python-headless
